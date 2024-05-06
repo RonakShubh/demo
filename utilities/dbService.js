@@ -63,7 +63,7 @@ const findManyRecordsWithPagination = async (
     .limit(limit);
 };
 
-export const updateBulkRecords = async (modelName, payload) => {
+const updateBulkRecords = async (modelName, payload) => {
   return new Promise(async function (resolve, reject) {
     collections[modelName]
       .bulkWrite(payload)
